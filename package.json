@@ -2,6 +2,7 @@
   "name": "watson-gas",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://yuvarajeshwar.github.io/watson-inspection.github.io/gas",
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
@@ -22,7 +23,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    
   },
   "eslintConfig": {
     "extends": [
