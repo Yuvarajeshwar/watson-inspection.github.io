@@ -1,0 +1,17 @@
+.infoContainer {
+    display: flex;
+    justify-content: space-between;
+    background-color: blue;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.label {
+    font-weight: bold;
+    padding-right: .5em;
+}
+
+.meter-info {
+    background-color: blue;
+}
