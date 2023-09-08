@@ -1,31 +1,54 @@
-import React from 'react';
-import { Grid } from '@mui/material';
-import Overview from './components/Overview'
+import React, { useState } from 'react'
+import { Grid, Paper, Divider  } from '@mui/material'
+import { useLocation } from 'react-router-dom'
+import { styled } from '@mui/system'
+// import Overview from './components/Overview'
 import ImageViewer from './components/ImageViewer'
-import Header from './header';
-import { useLocation } from 'react-router-dom';
-// import { ReviewQuestions } from './components/ReviewQuestions'
+import Questionnaire from './components/Questionnaire'
+import CustomerInfoPanel from './components/InfoPanel'
+import { questions, customerInfo, gasMeterInfo } from './utils/data'
 
-// import { Container } from '@mui/material';
+const StyledGrid = styled(Grid)`
+  height: 100vh;
+  overflow: hidden;
+`
+
+const ScrollablePaper = styled(Paper)`
+  max-height: 100vh;
+  background-color: #194759;
+  padding: 16px;
+  overflow-y: auto;
+`
+
+const DivisionLine = styled(Divider)`
+  margin: 16px 0;
+`
 
 export function ReviewPage () {
-  const location = useLocation();
+  const [responses, setResponses] = useState({})
+  const location = useLocation()
   const selectedRowData = location.state
+
+  const handleFormSubmit = (selectedOptions) => {
+    setResponses(selectedOptions);
+  }
+
   console.log(selectedRowData)
+  console.log(JSON.stringify(responses, null, 2))
   return (
     <div>
-      <span>{location.state}</span>
-      {/* Assuming Header, Overview, and ImageViewer are components */}
-      <Header />
-      <Grid container spacing={0}>
-        <Grid item xs={4}>
-          {/* Pass selectedRowData as a prop to Overview */}
-          <Overview selectedRowData={selectedRowData} />
+      <StyledGrid container>
+        <Grid item xs={3}>
+          <ScrollablePaper elevation={3}>
+            <CustomerInfoPanel customerInfo={customerInfo} gasMeterInfo={gasMeterInfo} />
+            <DivisionLine />
+            <Questionnaire questions={questions} onSubmit={handleFormSubmit} />
+          </ScrollablePaper>
         </Grid>
-        <Grid item xs={8}>
+        <Grid item xs={9}>
           <ImageViewer />
         </Grid>
-      </Grid>
+      </StyledGrid>
     </div>
-  );
-};
+  )
+}
