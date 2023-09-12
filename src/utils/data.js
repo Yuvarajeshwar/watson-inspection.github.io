@@ -40,82 +40,82 @@ export const questions = [
 
   export const itemData = [
     {
-      img: '/1.jpg',
+      img: 'watson-inspection.github.io/1.jpg',
       title: 'Breakfast',
       id: 1,
     },
     {
-      img: '/2.jpg',
+      img: 'watson-inspection.github.io/2.jpg',
       title: 'Burger',
       id: 1,
     },
     {
-      img: '/3.jpg',
+      img: 'watson-inspection.github.io/3.jpg',
       title: 'Camera',
       id: 2,
     },
     {
-      img: '/4.jpg',
+      img: 'watson-inspection.github.io/4.jpg',
       title: 'Coffee',
       id: 2,
     },
     {
-      img: '/5.jpg',
+      img: 'watson-inspection.github.io/5.jpg',
       title: 'Hats',
       id: 3,
     },
     {
-      img: '/11.jpg',
+      img: 'watson-inspection.github.io/11.jpg',
       title: 'Honey',
       id: 4,
     },
     {
-      img: '/7.jpg',
+      img: 'watson-inspection.github.io/7.jpg',
       title: 'Basketball',
       id: 5,
     },
     {
-      img: '/12.jpg',
+      img: 'watson-inspection.github.io/12.jpg',
       title: 'Fern',
       id:5,
     },
     {
-      img: '/9.jpg',
+      img: 'watson-inspection.github.io/9.jpg',
       title: 'Mushrooms',
       id:5,
     },
     {
-      img: '/10.jpg',
+      img: 'watson-inspection.github.io/10.jpg',
       title: 'Tomato basil',
       id:5,
     },
     {
-      img: '/14.jpg',
+      img: 'watson-inspection.github.io/14.jpg',
       title: 'Basketball',
       id:5,
     },
     {
-      img: '/18.jpg',
+      img: 'watson-inspection.github.io/18.jpg',
       title: 'Fern',
       id:6,
     },
     {
-      img: '/16.jpg',
+      img: 'watson-inspection.github.io/16.jpg',
       title: 'Mushrooms',
       id:7,
     },
     {
-      img: '/17.jpg',
+      img: 'watson-inspection.github.io/17.jpg',
       title: 'Tomato basil',
       id:8,
     },
     {
-      img: '/19.jpg',
+      img: 'watson-inspection.github.io/19.jpg',
       title: 'Mushrooms',
       id:9,
     },
     {
-      img: '/20.jpg',
+      img: 'watson-inspection.github.io/20.jpg',
       title: 'Tomato basil',
       id:9,
     },
