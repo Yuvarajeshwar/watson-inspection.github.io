@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Grid, Paper, Divider  } from '@mui/material'
 import { useLocation } from 'react-router-dom'
 import { styled } from '@mui/system'
@@ -24,29 +24,32 @@ const DivisionLine = styled(Divider)`
   margin: 16px 0;
 `
 
-export function ReviewPage () {
+export function ReviewPage (props) {
   const [responses, setResponses] = useState({})
+
+  const [load, setLoad] = useState({})
   const location = useLocation()
   const selectedRowData = location.state
-
+  console.log(selectedRowData)
+  
   const handleFormSubmit = (selectedOptions) => {
     setResponses(selectedOptions);
   }
 
-  console.log(selectedRowData)
-  console.log(JSON.stringify(responses, null, 2))
+  
+  // console.log(JSON.stringify(responses, null, 2))
   return (
     <div>
       <StyledGrid container>
         <Grid item xs={3}>
           <ScrollablePaper elevation={3}>
-            <CustomerInfoPanel customerInfo={customerInfo} gasMeterInfo={gasMeterInfo} />
+            <CustomerInfoPanel customerInfo={customerInfo} gasMeterInfo={gasMeterInfo} info={selectedRowData}   />
             <DivisionLine />
             <Questionnaire questions={questions} onSubmit={handleFormSubmit} />
           </ScrollablePaper>
         </Grid>
         <Grid item xs={9}>
-          <ImageViewer />
+          <ImageViewer imageId={selectedRowData} />
         </Grid>
       </StyledGrid>
     </div>

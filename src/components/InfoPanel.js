@@ -21,19 +21,21 @@ const InfoText = styled.p`
     color: white;
 `
 
-const CustomerInfoPanel = ({ customerInfo, gasMeterInfo }) => {
+const CustomerInfoPanel = ({ customerInfo, gasMeterInfo, info }) => {
   return (
     <InfoPanelWrapper>
       <SectionTitle>Customer Information</SectionTitle>
       <InfoSection>
-        <InfoText>Name: {customerInfo.name}</InfoText>
-        <InfoText>Email: {customerInfo.email}</InfoText>
+        <InfoText>Name: {info.customerName}</InfoText>
+        <InfoText>Phone: {info.phoneNumber}</InfoText>
         <InfoText>Address: {customerInfo.address}</InfoText>
       </InfoSection>
       <SectionTitle>Gas Meter Information</SectionTitle>
       <InfoSection>
-        <InfoText>Meter ID: {gasMeterInfo.meterId}</InfoText>
+        <InfoText>Meter ID: {info.connectionNumber}</InfoText>
         <InfoText>Reading: {gasMeterInfo.reading} m³</InfoText>
+        <InfoText>Installation Date: {gasMeterInfo.lastUpdated}</InfoText>
+        <InfoText>Status: Active</InfoText>
         <InfoText>Last Updated: {gasMeterInfo.lastUpdated}</InfoText>
       </InfoSection>
     </InfoPanelWrapper>

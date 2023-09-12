@@ -10,7 +10,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/reviewPage" element={<ReviewPage />}/>
-        <Route path="/gas" exact element={<GasData />}  /> 
+        <Route path="*" exact element={<GasData />}  /> 
       </Routes>
     </Router>
   );
