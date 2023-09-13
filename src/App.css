@@ -37,3 +37,11 @@
     transform: rotate(360deg);
   }
 }
+
+/* Gallery.css */
+.resizable-image {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: cover;
+}

@@ -24,16 +24,11 @@ export function GasData() {
 
   const navigate = useNavigate()
 
-  const OnRowClick = (params) => {
+  const OnRowClick = async (params) => {
     console.log(params.row)
-    const rowSele = params.row;
-    // Store clicked row data in state if needed
-    // setSelectedRowData(rowSele);
-
-    setTimeout(() => {
-      navigate('/reviewPage', { state:  rowSele  });
-    }, 1000);
-  };
+    const rowSele = params.row
+    await navigate('/reviewPage', { state:  rowSele  })
+  }
 
   return (
     <div>

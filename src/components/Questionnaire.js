@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import styled from '@emotion/styled'
 
 // Styled components
@@ -40,6 +41,7 @@ const SubmitButton = styled.button`
 
 function Questionnaire({ questions, onSubmit }) {
   const [selectedOptions, setSelectedOptions] = useState({})
+  const navigate = useNavigate()
 
   const handleOptionChange = (questionId, selectedOption) => {
     setSelectedOptions({
@@ -49,10 +51,12 @@ function Questionnaire({ questions, onSubmit }) {
   }
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault()
     onSubmit(selectedOptions)
 
-    setSelectedOptions({});
+    setSelectedOptions({})
+
+    navigate('http://localhost:3000/gas')
   }
 
   return (
