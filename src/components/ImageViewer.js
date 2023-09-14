@@ -12,7 +12,7 @@ const ScrollablePaper = styled(Paper)`
 
 export default function StandardImageList(props) {
   console.log(props.imageId.id)
-  const filteredImage = itemData.filter((item) => item.id === props.imageId.id);
+  const filteredImage = itemData.filter((item) => item.id === props.imageId.id)
   return (
     <ScrollablePaper elevation={3} >
         <ImageList sx={{ width: '100%', height: '100vh' }} cols={3} rowHeight={350} gap={10}>

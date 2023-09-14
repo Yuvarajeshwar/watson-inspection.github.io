@@ -42,7 +42,7 @@ export function ReviewPage (props) {
           <ScrollablePaper elevation={3}>
             <CustomerInfoPanel customerInfo={customerInfo} gasMeterInfo={gasMeterInfo} info={selectedRowData}   />
             <DivisionLine />
-            <Questionnaire questions={questions} onSubmit={handleFormSubmit} />
+            <Questionnaire questions={questions} onSubmit={handleFormSubmit} imageId={selectedRowData}/>
           </ScrollablePaper>
         </Grid>
         <Grid item xs={9}>

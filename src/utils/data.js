@@ -181,7 +181,7 @@ export const questions = [
     { id: 3, customerName: 'Jaime', connectionNumber: 12123, phoneNumber: '911-110-7321', reviewStatus: 'New', imageCount: 3, },
     { id: 4, customerName: 'Arya', connectionNumber: 38107, phoneNumber: '911-110-7321', reviewStatus: 'New', imageCount: 3, },
     { id: 5, customerName: 'Daenerys', connectionNumber: 74013, phoneNumber: '911-110-7321', reviewStatus: 'New', imageCount: 3, },
-    { id: 6, customerName: null, connectionNumber: 96771, phoneNumber: '911-110-7321', reviewStatus: 'New', imageCount: 3, },
+    { id: 6, customerName: 'Aroy', connectionNumber: 96771, phoneNumber: '911-110-7321', reviewStatus: 'New', imageCount: 3, },
     { id: 7, customerName: 'Ferrara', connectionNumber: 86108, phoneNumber: '911-110-7321', reviewStatus: 'New', imageCount: 3, },
     { id: 8, customerName: 'Rossini', connectionNumber: 33664, phoneNumber: '911-110-7321', reviewStatus: 'New', imageCount: 3, },
     { id: 9, customerName: 'Harvey', connectionNumber: 31840,phoneNumber: '911-110-7321', reviewStatus: 'New', imageCount: 3, },

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import styled from '@emotion/styled'
+import { columns, rows } from './../utils/data'
 
 // Styled components
 const QuestionnaireContainer = styled.div`
@@ -38,10 +39,21 @@ const SubmitButton = styled.button`
     background-color: #0056b3;
   }
 `
+export const updateReviewStatusById = (id, newReviewStatus) => {
+  const index = rows.findIndex(row => row.id === id)
 
-function Questionnaire({ questions, onSubmit }) {
+  if (index !== -1) {
+    rows[index].reviewStatus = newReviewStatus
+  } else {
+    console.log(`Object with id ${id} not found.`)
+  }
+}
+
+function Questionnaire({ questions, onSubmit, imageId }) {
   const [selectedOptions, setSelectedOptions] = useState({})
   const navigate = useNavigate()
+  const filteredRow = rows.filter((row) => row.id === imageId.id)
+  console.log(filteredRow)
 
   const handleOptionChange = (questionId, selectedOption) => {
     setSelectedOptions({
@@ -56,7 +68,11 @@ function Questionnaire({ questions, onSubmit }) {
 
     setSelectedOptions({})
 
-    navigate('http://localhost:3000/gas')
+    navigate('/')
+
+    if(imageId.id === filteredRow[0].id) {
+      updateReviewStatusById(filteredRow[0].id, 'Complete')
+    }
   }
 
   return (
