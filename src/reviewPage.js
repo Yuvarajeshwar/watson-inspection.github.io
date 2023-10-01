@@ -38,15 +38,19 @@ export function ReviewPage (props) {
   return (
     <div>
       <StyledGrid container>
-        <Grid item xs={3}>
+        <Grid item xs={3} height="100vh">
           <ScrollablePaper elevation={3}>
             <CustomerInfoPanel customerInfo={customerInfo} gasMeterInfo={gasMeterInfo} info={selectedRowData}   />
             <DivisionLine />
-            <Questionnaire questions={questions} onSubmit={handleFormSubmit} imageId={selectedRowData}/>
           </ScrollablePaper>
         </Grid>
-        <Grid item xs={9}>
+        <Grid item xs={6}>
           <ImageViewer imageId={selectedRowData} />
+        </Grid>
+        <Grid item xs={3}>
+        <ScrollablePaper elevation={3}>
+        <Questionnaire questions={questions} onSubmit={handleFormSubmit} imageId={selectedRowData}/>
+        </ScrollablePaper>
         </Grid>
       </StyledGrid>
     </div>

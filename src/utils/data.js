@@ -9,7 +9,7 @@ export const questions = [
     },
     {
       id: 2,
-      text: 'Does corrosion present on the device?',
+      text: 'Is corrosion present on the device?',
       options: [
         { id: 'yes', text: 'Yes' },
         { id: 'no', text: 'No' },
@@ -19,9 +19,9 @@ export const questions = [
       id: 3,
       text: 'Severity of damage?',
       options: [
-        { id: 'p1', text: 'P1' },
-        { id: 'p2', text: 'P2' },
-        { id: 'p3', text: 'P3' },
+        { id: 'p1', text: 'Priority 1 - Emergency' },
+        { id: 'p2', text: 'Priority 2 - To be fixed within three months' },
+        { id: 'p3', text: 'Priority 3 - To be fixed within six months' },
       ],
     },
   ]
